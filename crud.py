@@ -18,7 +18,7 @@ def select_all():
     for test in tests:
         print(test.id,test.name,test.age)
     session.close()
-
+# to
 def update():
     pass
 
@@ -44,7 +44,7 @@ def delete_minimum_one():
         session.delete(test.id)
         session.commit()
         print(f"id:{test.id} 名前:{test.name} 年齢:{test.age}を削除しました")
-        
+
     except UnmappedInstanceError:
         session.rollback()
         print(f"{id}は存在しません")
